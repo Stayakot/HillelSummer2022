@@ -3,6 +3,7 @@ package Lesson2;
 
 import java.util.Random;
 
+
 public class AverageTwoNumbers {
     Random random = new Random();
     int firstNumber = random.nextInt();
