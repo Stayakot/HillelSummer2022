@@ -8,7 +8,7 @@ public class minToMax {
     // Пример: дан массив {4, -5, 0, 6, 8}. После замены будет выглядеть {4, 8, 0, 6, -5}.
 
     public static void main(String[] args) {
-        int[] array = {4, 8, 0, 6, -5};
+        int[] array = {4, -5, 0, 6, 8};
         int maxNumber = 0;
         int maxIndex = 0;
         int minNumber = 100;
