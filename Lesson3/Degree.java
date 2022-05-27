@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Degree {
 
-    //Даны переменные x и n вычислить x^n.
+    //
 
     public static void main(String[] args) {
+        System.out.println("Даны переменные x и n вычислить x^n.");
 
         Scanner scanner = new Scanner(System.in);
         int value = scanner.nextInt();

@@ -4,9 +4,11 @@ import java.util.Arrays;
 
 public class tenOddNumbers {
 
-    // Создайте массив, содержащий 10 первых нечетных чисел.
-    // Выведете элементы массива на консоль в одну строку, разделяя запятой.
+
     public static void main(String[] args) {
+        System.out.println("Создайте массив, содержащий 10 первых нечетных чисел.");
+        System.out.println("Выведете элементы массива на консоль в одну строку, разделяя запятой.");
+        System.out.println();
         int[] array = new int[10];
 
         for (int i = 0; i < array.length; i++) {

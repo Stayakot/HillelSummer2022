@@ -6,10 +6,9 @@ import java.util.Scanner;
 
 public class minElement {
 
-    //Дан массив размерности N, найти наименьший
-    // элемент массива и вывести на консоль (массив заполнить случайными числами из диапазона 0 .. 100)
-
     public static void main(String[] args) {
+        System.out.println("Дан массив размерности N, найти наименьший");
+        System.out.println("элемент массива и вывести на консоль (массив заполнить случайными числами из диапазона 0 .. 100)");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int number = scanner.nextInt();

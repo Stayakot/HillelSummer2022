@@ -2,17 +2,10 @@ package Lesson3;
 
 import java.util.Scanner;
 
-public class While {
-//Перепишите программы (1 и 2) с использованием цикла while.
+public class WhileFactorial {
     public static void main(String[] args) {
-        int number = 0;
-        while ( number <= 99){
-            if (number%2!=0)
-                System.out.print(number + " ");
-            number++;
-        }
+        System.out.println("Дано число n при помощи цикла while посчитать факториал n!");
         System.out.println();
-
         Scanner scanner=new Scanner(System.in);
         int numbers = scanner.nextInt();
         int result=1;
@@ -24,5 +17,5 @@ public class While {
         }
         System.out.println(result);
     }
-}
 
+}

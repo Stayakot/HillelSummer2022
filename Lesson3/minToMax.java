@@ -4,10 +4,9 @@ import java.util.Arrays;
 
 public class minToMax {
 
-    //Поменять наибольший и наименьший элементы массива местами.
-    // Пример: дан массив {4, -5, 0, 6, 8}. После замены будет выглядеть {4, 8, 0, 6, -5}.
-
     public static void main(String[] args) {
+        System.out.println("Поменять наибольший и наименьший элементы массива местами.");
+        System.out.println("Пример: дан массив {4, -5, 0, 6, 8}. После замены будет выглядеть {4, 8, 0, 6, -5}.");
         int[] array = {4, -5, 0, 6, 8};
         int maxNumber = 0;
         int maxIndex = 0;

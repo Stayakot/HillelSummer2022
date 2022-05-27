@@ -2,10 +2,8 @@ package Lesson3;
 
 public class ChessBoard {
 
-    //Вывести на экран шахматную доску 8х8 в виде 2 мерного массива (W - белые клетки , B - черные клети)
-
     public static void main(String[] args) {
-
+        System.out.println("Вывести на экран шахматную доску 8х8 в виде 2 мерного массива (W - белые клетки , B - черные клети)");
 
         String[][] chessBoard = new String[8][8];
         for (int i = 0; i < chessBoard.length; i++) {

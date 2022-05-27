@@ -4,10 +4,12 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-//В массиве из задания 9. найти наибольший элемент
+//
 
 public class maxElement {
     public static void main(String[] args) {
+        System.out.println("Дан массив размерности N, найти наибольший" +
+                "элемент массива и вывести на консоль (массив заполнить случайными числами из диапазона 0 .. 100)");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int number = scanner.nextInt();

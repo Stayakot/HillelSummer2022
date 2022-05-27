@@ -3,8 +3,9 @@ package Lesson3;
 import java.util.Scanner;
 
 public class Multiplier {
-    //Необходимо вывести на экран таблицу умножения на Х (х любое число в диапазоне 0 .. 10)
+
     public static void main(String[] args) {
+        System.out.println("Необходимо вывести на экран таблицу умножения на Х (х любое число в диапазоне 0 .. 10)");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         int i = 1;
