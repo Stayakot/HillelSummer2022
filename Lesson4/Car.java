@@ -5,6 +5,7 @@ public class Car {
     double remainFuel;
     double consumption100km;
     double requiredToBunker;
+    double requiredFuel;
 
     public Car(double volume, double remainFuel, double consumption100km) {
         this.volume = volume;
@@ -30,7 +31,7 @@ public class Car {
     }
 
     public void requiredFuelForDistance(double distance){
-        double requiredFuel=distance/100*consumption100km;
+        requiredFuel=distance/100*consumption100km;
         requiredToBunker = requiredFuel-remainFuel;
         System.out.println("Для преодоленния " + distance + " км."+ " Понадобится: " + requiredFuel + " лтр. топлива");
         System.out.println("Дозаправить нужно: " + requiredToBunker+ " лтр.");
@@ -45,7 +46,9 @@ class Main{
         Car car = new Car(30, 29.5, 15);
         car.requiredFuelForDistance(481);
         double price=Integer.parseInt(args[0])*car.requiredToBunker;
-        System.out.println("Стоимость топлива что нужно дозаправить: " + price);
+        double totalPrice=Integer.parseInt(args[0])*car.requiredFuel;
+        System.out.println("Cтоимость топлива что нужно дозаправить по маршруту Одесса-Киев: " + price);
+        System.out.println("Общая стоимость поездки по маршруту Одесса-Киев: " + totalPrice);
         car.remainFuelDuringDistance(178);
         System.out.println("Остаток топлива на  Кривое Озеро: " + car.remainFuel);
         car.fullVolume();
@@ -54,6 +57,7 @@ class Main{
         car.fullVolume();
         car.remainFuelDuringDistance(148);
         System.out.println("Остаток топлива на  Киев: " + car.remainFuel);
+
 
     }
 }
