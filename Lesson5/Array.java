@@ -22,5 +22,6 @@ public class Array {
         methods.student_check_faculty_and_cours(student, "History", 3);
         methods.year(student, 1991);
         methods.list_group(student, "A");
+
     }
 }

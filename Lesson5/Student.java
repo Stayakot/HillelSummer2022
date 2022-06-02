@@ -207,4 +207,5 @@ class Kristina extends Student {
     public Kristina(int id, String name, String surname, String middleName, int year, String address, String telNumber, String faculty, int course, String group) {
         super(1, "Kristina", "Spivak", "Alexandrovna", 1994, "Odesa", "+38095543", "Math", 3, "A");
     }
+
 }

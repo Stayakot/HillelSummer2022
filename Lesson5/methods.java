@@ -12,6 +12,7 @@ public class methods {
         System.out.println();
     }
 
+
     public   static void student_check_faculty_and_cours(Student[] students, String faculty, int course) {
         System.out.println("Студенты на факультете " + faculty + "и курсе " + course+" :");
         for (Student student : students) {
