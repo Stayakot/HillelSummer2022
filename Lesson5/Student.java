@@ -2,16 +2,16 @@ package Lesson5;
 
 public class Student {
 
-    int id;
-    String name;
-    String surname;
-    String middleName;
-    int year;
-    String address;
-    String telNumber;
-    String faculty;
-    int course;
-    String group;
+    private int id;
+    private String name;
+    private String surname;
+    private  String middleName;
+    private   int year;
+    private  String address;
+    private  String telNumber;
+    private String faculty;
+    private  int course;
+    private   String group;
 
     public int getId() {
         return id;

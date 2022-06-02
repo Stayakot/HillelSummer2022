@@ -1,7 +1,5 @@
 package Lesson5;
 
-import java.util.Objects;
-
 public class Array {
     public static void main(String[] args) {
 
@@ -18,10 +16,10 @@ public class Array {
         student[8] = new Oleg(2, "Oleg", "Polets", "Konstantinovich", 1995, "Odesa", "380921535", "History", 3, "B");
         student[9] = new Kristina(1, "Kristina", "Spivak", "Alexandrovna", 1994, "Odesa", "+38095543", "Math", 3, "A");
 
-        methods.faculty(student, "Math");
-        methods.student_check_faculty_and_cours(student, "History", 3);
-        methods.year(student, 1991);
-        methods.list_group(student, "A");
+        Methods.faculty(student, "Math");
+        Methods.studentCheckFacultyAndCourse(student, "History", 3);
+        Methods.year(student, 1991);
+        Methods.listGroup(student, "A");
 
     }
 }
