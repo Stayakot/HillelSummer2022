@@ -42,26 +42,30 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     // суммарное потребление трафика интернета для определенного города
     @Override
-    public void internetTraffic(Subscriber[] subscribers, String city) {
+    public int internetTraffic(Subscriber[] subscribers, String city) {
         int sum = 0;
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getCity().equals(city)) {
                 sum += subscriber.getInternetTraffic();
             }
         }
-        System.out.println("Cуммарное потребление трафика интернета для города: " + sum);
+        return sum;
 
     }
 
     //количество абонентов с отрицательны балансом
+
     @Override
-    public void balance(Subscriber[] subscribers) {
+
+    public int balance(Subscriber[] subscribers) {
         System.out.println("Количество абонентов с отрицательны балансом:");
+        int count=0;
+
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getBalance() < 0) {
-                System.out.println(subscriber.toString());
+                count+=1;
             }
-        }
+        }return count;
 
 
     }

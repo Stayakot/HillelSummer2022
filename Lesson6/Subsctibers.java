@@ -36,8 +36,8 @@ public class Subsctibers {
         System.out.println();
         subscriberService.firstLetter(subscribers, 'S');
         System.out.println();
-        subscriberService.internetTraffic(subscribers, "Odesa");
+        System.out.println("Cуммарное потребление трафика интернета для определенного города: "+subscriberService.internetTraffic(subscribers, "Odesa"));
         System.out.println();
-        subscriberService.balance(subscribers);
+        System.out.println(subscriberService.balance(subscribers));
     }
 }

@@ -16,10 +16,10 @@ public interface SubscriberService {
 
 
     // суммарное потребление трафика интернета для определенного города
-      void internetTraffic(Subscriber[] subscribers, String city) ;
+      int internetTraffic(Subscriber[] subscribers, String city);
 
 
     //количество абонентов с отрицательны балансом
-    void balance(Subscriber[] subscribers) ;
+    int balance(Subscriber[] subscribers) ;
 
 }
