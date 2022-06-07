@@ -5,7 +5,8 @@ public class SubscriberServiceImpl implements SubscriberService {
 
 
     //сведения об абонентах, у которых время внутригородских разговоров превышает заданное;
-    public static void localTime(Subscriber[] subscribers, int localTime) {
+    @Override
+    public void localTime(Subscriber[] subscribers, int localTime) {
         System.out.println("Cведения об абонентах, у которых время внутригородских разговоров превышает заданное ");
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getLocalTime() > localTime) {
@@ -15,9 +16,8 @@ public class SubscriberServiceImpl implements SubscriberService {
         System.out.println();
     }
 
-
-//сведения об абонентах, которые пользовались междугородней связью;
-    public static void international(Subscriber[] subscribers) {
+    //сведения об абонентах, которые пользовались междугородней связью;
+    public void international(Subscriber[] subscribers) {
         System.out.println("Cведения об абонентах, которые пользовались междугородней связью; ");
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getInternational() > 0) {
@@ -27,8 +27,8 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     }
 
-//сведения об абонентах ФИО, номер телефона, баланс у который первая буква фамилии передается как параметр.
-    public static void firstLetter(Subscriber[] subscribers, char firstLetter) {
+    //сведения об абонентах ФИО, номер телефона, баланс у который первая буква фамилии передается как параметр.
+    public void firstLetter(Subscriber[] subscribers, char firstLetter) {
         System.out.println("Сведения об абонентах ФИО, номер телефона, баланс у который первая буква фамилии передается как параметр.:");
         for (Subscriber subscriber : subscribers) {
             char[] strToArray = subscriber.getSurname().toCharArray();
@@ -38,8 +38,8 @@ public class SubscriberServiceImpl implements SubscriberService {
         }
     }
 
-// суммарное потребление трафика интернета для определенного города
-    public static void internetTriffic(Subscriber[] subscribers, String city) {
+    // суммарное потребление трафика интернета для определенного города
+    public void internetTriffic(Subscriber[] subscribers, String city) {
         int sum = 0;
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getCity().equals(city)) {
@@ -50,8 +50,8 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     }
 
-//количество абонентов с отрицательны балансом
-    public static void balance(Subscriber[] subscribers) {
+    //количество абонентов с отрицательны балансом
+    public void balance(Subscriber[] subscribers) {
         System.out.println("Количество абонентов с отрицательны балансом:");
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getBalance() < 0) {
@@ -61,7 +61,10 @@ public class SubscriberServiceImpl implements SubscriberService {
 
 
     }
+
+
 }
+
 
 
 

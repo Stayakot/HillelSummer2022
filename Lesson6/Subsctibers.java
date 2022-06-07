@@ -28,15 +28,15 @@ public class Subsctibers {
         subscribers[8] = Oleg;
         subscribers[9] = Kristina;
 
+        SubscriberServiceImpl subscriberService = new SubscriberServiceImpl();
 
-        SubscriberServiceImpl.localTime(subscribers, 20);
+        subscriberService.localTime(subscribers, 20);
+        subscriberService.international(subscribers);
         System.out.println();
-        SubscriberServiceImpl.international(subscribers);
+        subscriberService.firstLetter(subscribers, 'S');
         System.out.println();
-        SubscriberServiceImpl.firstLetter(subscribers, 'S');
+        subscriberService.internetTriffic(subscribers, "Odesa");
         System.out.println();
-        SubscriberServiceImpl.internetTriffic(subscribers, "Odesa");
-        System.out.println();
-        SubscriberServiceImpl.balance(subscribers);
+        subscriberService.balance(subscribers);
     }
 }
