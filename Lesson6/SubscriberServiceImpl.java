@@ -17,6 +17,7 @@ public class SubscriberServiceImpl implements SubscriberService {
     }
 
     //сведения об абонентах, которые пользовались междугородней связью;
+    @Override
     public void international(Subscriber[] subscribers) {
         System.out.println("Cведения об абонентах, которые пользовались междугородней связью; ");
         for (Subscriber subscriber : subscribers) {
@@ -28,6 +29,7 @@ public class SubscriberServiceImpl implements SubscriberService {
     }
 
     //сведения об абонентах ФИО, номер телефона, баланс у который первая буква фамилии передается как параметр.
+    @Override
     public void firstLetter(Subscriber[] subscribers, char firstLetter) {
         System.out.println("Сведения об абонентах ФИО, номер телефона, баланс у который первая буква фамилии передается как параметр.:");
         for (Subscriber subscriber : subscribers) {
@@ -39,6 +41,7 @@ public class SubscriberServiceImpl implements SubscriberService {
     }
 
     // суммарное потребление трафика интернета для определенного города
+    @Override
     public void internetTriffic(Subscriber[] subscribers, String city) {
         int sum = 0;
         for (Subscriber subscriber : subscribers) {
@@ -51,6 +54,7 @@ public class SubscriberServiceImpl implements SubscriberService {
     }
 
     //количество абонентов с отрицательны балансом
+    @Override
     public void balance(Subscriber[] subscribers) {
         System.out.println("Количество абонентов с отрицательны балансом:");
         for (Subscriber subscriber : subscribers) {
