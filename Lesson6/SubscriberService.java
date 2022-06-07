@@ -4,22 +4,22 @@ public interface SubscriberService {
 
 
     //сведения об абонентах, у которых время внутригородских разговоров превышает заданное;
-    void localTime(Subscriber[] subscribers, int localTime) ;
+    void subscriberUsedLocalCall(Subscriber[] subscribers, int localTime) ;
 
 
     //сведения об абонентах, которые пользовались междугородней связью;
-      void international(Subscriber[] subscribers) ;
+      void subscriberUsedInternationalCall(Subscriber[] subscribers) ;
 
 
     //сведения об абонентах ФИО, номер телефона, баланс у который первая буква фамилии передается как параметр.
-     void firstLetter(Subscriber[] subscribers, char firstLetter) ;
+     void subscribersWithFirstLetterParameter(Subscriber[] subscribers, char firstLetter) ;
 
 
     // суммарное потребление трафика интернета для определенного города
-      int internetTraffic(Subscriber[] subscribers, String city);
+      int sumOfInternetTrafficForCity(Subscriber[] subscribers, String city);
 
 
     //количество абонентов с отрицательны балансом
-    int balance(Subscriber[] subscribers) ;
+    int subscribersWithMinusBalance(Subscriber[] subscribers) ;
 
 }

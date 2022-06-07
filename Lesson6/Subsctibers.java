@@ -30,14 +30,14 @@ public class Subsctibers {
 
         SubscriberServiceImpl subscriberService = new SubscriberServiceImpl();
 
-        subscriberService.localTime(subscribers, 20);
+        subscriberService.subscriberUsedLocalCall(subscribers, 20);
         System.out.println();
-        subscriberService.international(subscribers);
+        subscriberService.subscriberUsedInternationalCall(subscribers);
         System.out.println();
-        subscriberService.firstLetter(subscribers, 'S');
+        subscriberService.subscribersWithFirstLetterParameter(subscribers, 'S');
         System.out.println();
-        System.out.println("Cуммарное потребление трафика интернета для определенного города: "+subscriberService.internetTraffic(subscribers, "Odesa"));
+        System.out.println("Cуммарное потребление трафика интернета для определенного города: "+subscriberService.sumOfInternetTrafficForCity(subscribers, "Odesa"));
         System.out.println();
-        System.out.println(subscriberService.balance(subscribers));
+        System.out.println(subscriberService.subscribersWithMinusBalance(subscribers));
     }
 }

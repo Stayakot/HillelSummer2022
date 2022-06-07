@@ -12,12 +12,12 @@ public class Subscriber {
     private String telNumber;
     private int numberOfContract;
     private int balance;
-    private int localTime;
-    private int international;
+    private int localCalls;
+    private int internationalCalls;
 
     private int internetTraffic;
 
-    public Subscriber(int id, String name, String surname, String middleName, int year, String city, String telNumber, int numberOfContract, int balance, int localTime, int international, int internetTraffic) {
+    public Subscriber(int id, String name, String surname, String middleName, int year, String city, String telNumber, int numberOfContract, int balance, int localCalls, int internationalCalls, int internetTraffic) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -27,8 +27,8 @@ public class Subscriber {
         this.telNumber = telNumber;
         this.numberOfContract = numberOfContract;
         this.balance = balance;
-        this.localTime = localTime;
-        this.international = international;
+        this.localCalls = localCalls;
+        this.internationalCalls = internationalCalls;
         this.internetTraffic = internetTraffic;
     }
 
@@ -112,20 +112,20 @@ public class Subscriber {
         this.balance = balance;
     }
 
-    public int getLocalTime() {
-        return localTime;
+    public int getLocalCalls() {
+        return localCalls;
     }
 
-    public void setLocalTime(int localTime) {
-        this.localTime = localTime;
+    public void setLocalCalls(int localCalls) {
+        this.localCalls = localCalls;
     }
 
-    public int getInternational() {
-        return international;
+    public int getInternationalCalls() {
+        return internationalCalls;
     }
 
-    public void setInternational(int international) {
-        this.international = international;
+    public void setInternationalCalls(int internationalCalls) {
+        this.internationalCalls = internationalCalls;
     }
 
 
@@ -141,8 +141,8 @@ public class Subscriber {
                 ", telNumber='" + telNumber + '\'' +
                 ", numberOfContract=" + numberOfContract +
                 ", balance=" + balance +
-                ", localTime=" + localTime +
-                ", international=" + international +
+                ", localCalls=" + localCalls +
+                ", internationalCalls=" + internationalCalls +
                 ", internetTraffic=" + internetTraffic +
                 '}';
     }
