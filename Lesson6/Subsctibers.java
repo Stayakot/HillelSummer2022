@@ -31,6 +31,7 @@ public class Subsctibers {
         SubscriberServiceImpl subscriberService = new SubscriberServiceImpl();
 
         subscriberService.localTime(subscribers, 20);
+        System.out.println();
         subscriberService.international(subscribers);
         System.out.println();
         subscriberService.firstLetter(subscribers, 'S');
