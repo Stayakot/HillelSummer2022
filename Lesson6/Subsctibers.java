@@ -36,7 +36,7 @@ public class Subsctibers {
         System.out.println();
         subscriberService.firstLetter(subscribers, 'S');
         System.out.println();
-        subscriberService.internetTriffic(subscribers, "Odesa");
+        subscriberService.internetTraffic(subscribers, "Odesa");
         System.out.println();
         subscriberService.balance(subscribers);
     }

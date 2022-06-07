@@ -42,7 +42,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     // суммарное потребление трафика интернета для определенного города
     @Override
-    public void internetTriffic(Subscriber[] subscribers, String city) {
+    public void internetTraffic(Subscriber[] subscribers, String city) {
         int sum = 0;
         for (Subscriber subscriber : subscribers) {
             if (subscriber.getCity().equals(city)) {
