@@ -3,7 +3,6 @@ package Lesson7;
 public class test {
     public static void main(String[] args) {
 
-
         MyArrayList<String>  myArrayList =new MyArrayList<>();
         myArrayList.add(2,"poka");
         myArrayList.add("kino");
