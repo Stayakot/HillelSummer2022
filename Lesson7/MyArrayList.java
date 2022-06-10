@@ -79,7 +79,6 @@ public class MyArrayList<E> {
         return true;
     }
 
-
     //Удаляет элемент
     public boolean delete(String value) {
         if (value == null) {
