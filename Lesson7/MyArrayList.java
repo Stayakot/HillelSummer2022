@@ -43,6 +43,7 @@ public class MyArrayList<E> {
         return true;
     }
 
+    // Добавляет объект по индексу
     public boolean add(int index, String value) {
         if (index < 0 || index > size) {
             return false;
@@ -96,13 +97,5 @@ public class MyArrayList<E> {
             delete(index);
         }
         return true;
-    }
-
-    @Override
-    public String toString() {
-        return "MyArrayList{" +
-                "list=" + Arrays.toString(list) +
-                ", size=" + size +
-                '}';
     }
 }

@@ -13,6 +13,6 @@ public class test {
         myArrayList.add(0,"asf");
         myArrayList.delete("kino");
         myArrayList.delete(2);
-        System.out.println(myArrayList.toString());
+
     }
 }
