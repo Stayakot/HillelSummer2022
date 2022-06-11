@@ -37,13 +37,12 @@ public class MyArrayList<E> {
             for (int i = 0; i < list.length; i++) {
                 newArray[i] = list[i];
             }
-            list[size++] = value;
+            list = newArray;
 
         }
         return true;
     }
 
-    //добавляем элемент по индуксу
     public boolean add(int index, String value) {
         if (index < 0 || index > size) {
             return false;
@@ -76,11 +75,11 @@ public class MyArrayList<E> {
     //Удаляет элемент по индуксу
     public boolean delete(int index) {
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
+            for (int i = index; i < size ; i++) {
+                list[i] = list[i+1];
             }
+            size--;
         }
-        size--;
         return true;
     }
 
@@ -90,11 +89,20 @@ public class MyArrayList<E> {
         for (int i = 0; i < size; i++) {
             if (value.equals(list[i])) {
                 index = i;
+                break;
             }
         }
         if (index != -1) {
             delete(index);
         }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "MyArrayList{" +
+                "list=" + Arrays.toString(list) +
+                ", size=" + size +
+                '}';
     }
 }
