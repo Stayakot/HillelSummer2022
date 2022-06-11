@@ -30,18 +30,33 @@ public class MyArrayList<E> {
 
     //добавляем элемент в конец списка
     public boolean add(String value) {
-        if (size == list.length) {
-            list = increaseCapacity();
-        }
         list[size] = value;
         size++;
+        if (size == list.length) {
+            String[] newArray = new String[list.length * 2];
+            for (int i = 0; i < list.length; i++) {
+                newArray[i] = list[i];
+            }
+            list[size++] = value;
+
+        }
         return true;
     }
 
-    //Добавляет элемент по индуксу
+    //добавляем элемент по индуксу
     public boolean add(int index, String value) {
+        if (index < 0 || index > size) {
+            return false;
+        }
         if (size == list.length) {
-            list = increaseCapacity();
+            String[] newArray = new String[list.length * 2];
+            for (int i = 0; i < list.length; i++) {
+                newArray[i] = list[i];
+            }
+            list = newArray;
+        }
+        for (int i = size - 1; i >= index; i--) {
+            list[i + 1] = list[i];
         }
         list[index] = value;
         size++;
@@ -49,71 +64,37 @@ public class MyArrayList<E> {
     }
 
 
-    //Метод для увеличения емкости массива
-    private String[] increaseCapacity() {
-        String[] temp = new String[(list.length * 2)];
-        System.arraycopy(list, 0, temp, 0, list.length);
-        return temp;
-    }
-
-
     //проверяем индексы, не выходят ли они за границы массива
-    private int isIndexExist(int index) {
+    private void isIndexExist(int index) {
         if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Элемента нет "
                     + "Количество элементов в масиве = " + size
                     + ". Общее количество элементов = " + list.length);
         }
-        return index;
     }
 
     //Удаляет элемент по индуксу
     public boolean delete(int index) {
-        isIndexExist(index);
-        String[] temp = list;
-        list = new String[temp.length - 1];
-        String value = temp[index];
-        System.arraycopy(temp, 0, list, 0, index);
-        System.arraycopy(temp, index + 1, list, index, temp.length - index - 1);
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+        }
         size--;
         return true;
     }
-    //Удаляет элемент
+
+    //Удаляет элемент по value
     public boolean delete(String value) {
-        if (value == null) {
-            for (int index = 0; index < size; index++)
-                if (list[index] == null) {
-                    fastRemove(index);
-                    return true;
-
-                }
-        } else {
-            for (int index = 0; index < size; index++)
-                if (value.equals(list[index])) {
-                    fastRemove(index);
-                    return true;
-
-                }
+        int index = -1;
+        for (int i = 0; i < size; i++) {
+            if (value.equals(list[i])) {
+                index = i;
+            }
         }
-        return false;
-
-    }
-
-    private void fastRemove(int index) {
-
-        int numMoved = size - index - 1;
-        if (numMoved > 0)
-            System.arraycopy(list, index + 1, list, index,
-                    numMoved);
-        list[--size] = null;
-
-    }
-
-    @Override
-    public String toString() {
-        return "MyArrayList{" +
-                "list=" + Arrays.toString(list) +
-                ", size=" + size +
-                '}';
+        if (index != -1) {
+            delete(index);
+        }
+        return true;
     }
 }
