@@ -46,7 +46,7 @@ public class MyArrayListImpl<E> implements MyArrayList {
         return true;
     }
 
-    //
+    //Удаляет элемент по индуксу
     private boolean delete(int index) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size; i++) {
@@ -57,7 +57,7 @@ public class MyArrayListImpl<E> implements MyArrayList {
         return true;
     }
 
-
+    //Удаляет элемент по value
     @Override
     public boolean delete(String value) {
         int index = -1;
@@ -73,7 +73,7 @@ public class MyArrayListImpl<E> implements MyArrayList {
         return true;
     }
 
-
+    //проверяем индексы, не выходят ли они за границы массива
     private void isIndexExist(int index) {
         if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Элемента нет "
@@ -89,6 +89,8 @@ public class MyArrayListImpl<E> implements MyArrayList {
         return list[index];
     }
 
+
+    //
     @Override
     public boolean equals(Collection o) {
         if (this == o) return true;
