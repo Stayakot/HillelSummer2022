@@ -99,12 +99,15 @@ public class MyArrayListImpl<E> implements MyArrayList {
         return size == that.size && Arrays.equals(list, that.list);
     }
 
+
+    // Содержиться ли в коллекции String
     @Override
     public boolean contain(String value) {
 
         return indexOf(value) >= 0;
     }
 
+    //Возвращает индекс первого вхождения указанного значения в строковый объект String
     public int indexOf(String value) {
         return indexOfRange(value, 0, size);
     }
