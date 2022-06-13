@@ -1,11 +1,8 @@
 package Lesson8;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class test {
     public static void main(String[] args) {
-        MyArrayList<String> list=new MyArrayList<>();
+        MyArrayListImpl<String> list=new MyArrayListImpl<>();
 
         list.add("one");
         list.add("one");
