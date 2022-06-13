@@ -140,12 +140,4 @@ public class MyArrayList<E> implements MyArrayListImpl {
     public int size() {
         return size;
     }
-
-    @Override
-    public String toString() {
-        return "MyArrayList{" +
-                "list=" + Arrays.toString(list) +
-                ", size=" + size +
-                '}';
-    }
 }

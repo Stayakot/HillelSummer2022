@@ -19,4 +19,5 @@ public interface MyArrayListImpl {
     boolean clear();
 
     int size();
+
 }
