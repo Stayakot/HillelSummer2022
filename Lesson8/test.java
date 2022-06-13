@@ -14,6 +14,8 @@ public class test {
         System.out.println(myArrayList.contain("poka"));
         System.out.println(myArrayList.get(1).equals(myArrayList.get(2)));
 
+        System.out.println(myArrayList.size());
+
         myArrayList.clear();
         System.out.println(myArrayList);
 
