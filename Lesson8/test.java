@@ -11,9 +11,11 @@ public class test {
         myArrayList.add("privet");
         myArrayList.add("kino");
 
-
         System.out.println(myArrayList.contain("poka"));
         System.out.println(myArrayList.get(1).equals(myArrayList.get(2)));
+
+        myArrayList.clear();
+        System.out.println(myArrayList);
 
     }
 
