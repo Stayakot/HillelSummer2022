@@ -90,7 +90,7 @@ public class MyArrayListImpl<E> implements MyArrayList {
     }
 
 
-    //
+    //Проверяет equals коллекций
     @Override
     public boolean equals(Collection o) {
         if (this == o) return true;
@@ -98,7 +98,6 @@ public class MyArrayListImpl<E> implements MyArrayList {
         MyArrayListImpl that = (MyArrayListImpl) o;
         return size == that.size && Arrays.equals(list, that.list);
     }
-
 
     @Override
     public boolean contain(String value) {
