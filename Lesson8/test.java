@@ -1,24 +1,26 @@
 package Lesson8;
 
+public class Test {
 
-public class test {
     public static void main(String[] args) {
-        MyArrayListImpl<String>myArrayList=new MyArrayListImpl<>();
 
-        myArrayList.add("poka");
-        myArrayList.add("kino");
-        myArrayList.add("kino");
-        myArrayList.add("privet");
-        myArrayList.add("kino");
 
-        System.out.println(myArrayList.contain("poka"));
-        System.out.println(myArrayList.get(1).equals(myArrayList.get(2)));
 
-        System.out.println(myArrayList.size());
-
-        myArrayList.clear();
-        System.out.println(myArrayList);
-
+    CollectionImpl collection=new CollectionImpl();
+        collection.add("Privet");
+        collection.add("Privet");
+        collection.add("Poka");
+        collection.add("Hi");
+        collection.add("Hello");
+        collection.add("Bye");
+        System.out.println(collection.get(0).equals(collection.get(1)));
+        System.out.println(collection.get(0));
+        collection.add(4, "What's up");
+        collection.delete("Bye");
+        System.out.println(collection.contain(null));
+        System.out.println(collection.contain("What's up"));
+        System.out.println(collection);
+        collection.clear();
+        System.out.println(collection);
     }
-
 }
