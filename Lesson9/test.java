@@ -26,5 +26,6 @@ public class test {
         System.out.println(collection.size());
         collection.clear();
         System.out.println(collection.size());
+
     }
 }

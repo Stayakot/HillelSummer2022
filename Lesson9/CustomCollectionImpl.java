@@ -5,7 +5,6 @@ public class CustomCollectionImpl implements CustomCollection {
     private Node head;
     private Node rail;
     private int size = 0;
-
     private static class Node {
         String element;
         Node next;
